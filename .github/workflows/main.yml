@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check HTML and CSS validation.
+      uses: Cyb3r-Jak3/html5validator-action@master
+      with:
+        root: /
+        log_level: INFO
+        css: true
+        action_debug: true
+      continue-on-error: true
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: log
+        path: log.log
