@@ -62,7 +62,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    min-width: 200px;
+    min-width: 300px;
 }
 
 #form button {
