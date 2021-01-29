@@ -100,6 +100,10 @@ footer {
         max-width: 300px;
         max-height: 300px;
     }
+
+    #project1 {
+        flex-direction: column;
+    }
 }
 
 
@@ -112,5 +116,9 @@ footer {
     #contact iframe {
         max-width: 600px;
         max-height: 600px;
+    }
+
+    #project1 {
+        flex-direction: row;
     }
 }
