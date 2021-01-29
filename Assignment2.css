@@ -1,0 +1,91 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set main content CSS */
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* This is the header/navigation bar CSS */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+header>div {
+    margin: 10px;
+    padding: 5px;
+}
+
+header>div>a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Changing the body */
+
+body {
+    background-color: pink;
+}
+
+/* Changing the about section */
+
+#about {
+    display: flex;
+    justify-content: center;
+}
+
+#about img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+/* Contact Section */
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Form Section */
+
+#form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 200px;
+}
+
+#form button {
+    max-width: 60px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+
+/* Making it look good on a phone */
+
+@media (max-device-width: 500px) {
+    #contact {
+        flex-direction: column;
+    }
+}
+
+
+@media (min-device-width: 501px) {
+    #contact {
+        flex-direction: row;
+    }
+}
