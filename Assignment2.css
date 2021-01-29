@@ -81,11 +81,23 @@ footer {
     #contact {
         flex-direction: column;
     }
+
+    /* Set maps to max 300px when on mobile */
+    #contact iframe {
+        max-width: 300px;
+        max-height: 300px;
+    }
 }
 
 
 @media (min-device-width: 501px) {
     #contact {
         flex-direction: row;
+    }
+
+    /* Sets the iframe to max 600 pixels on all other devices*/
+    #contact iframe {
+        max-width: 600px;
+        max-height: 600px;
     }
 }
